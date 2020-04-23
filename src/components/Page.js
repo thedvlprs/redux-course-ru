@@ -9,14 +9,20 @@ export class Page extends React.Component {
 	render() {
 		const { year, photos } = this.props
 		return (
-			<div>
-				<div>
-					<button onClick={this.onBtnClick}>2019</button>
-					<button onClick={this.onBtnClick}>2020</button>
-				</div>
+			<div className="ib page">
 				<p>
-					У тебя {photos.length} фото за {year} год
+					<button className="btn" onClick={this.onBtnClick}>
+						2018
+					</button>{' '}
+					<button className="btn" onClick={this.onBtnClick}>
+						2019
+					</button>{' '}
+					<button className="btn" onClick={this.onBtnClick}>
+						2020
+					</button>{' '}
 				</p>
+				<h3>{year} год</h3>
+				<p>У тебя {photos.length} фото.</p>
 			</div>
 		)
 	}
